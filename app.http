@@ -1,0 +1,33 @@
+POST http://localhost:3000/register/
+Content-Type:application/json
+
+{
+    "username":"Ajay",
+    "email":"aeft99@gmail.com",
+    "password":"128p7392"
+}
+
+###
+
+POST http://localhost:3000/login/
+
+{
+    "username":"AKhil",
+    "email":"abc.2024@gmail.com"
+}
+
+
+
+DELETE http://localhost:3000/logout/
+
+
+###
+
+GET http://localhost:3000/api/data
+
+###
+
+POST http://localhost:3000/auth/
+
+###
+

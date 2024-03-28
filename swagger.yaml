@@ -1,0 +1,75 @@
+swagger: '5.0'
+info:
+  title:  BACKEND ASSIGNMENT
+  version: '1.0'
+paths:
+  /register:
+    post:
+      summary: Returns a list of valid users 
+      responses:
+        200:
+          description: A list of users 
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+  /login:
+    post:
+      summary: Returns a list of users and validate password
+      responses:
+        200:
+          description: A list of users and valid password
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+  /logout:
+    delete:
+      summary:  return a user list after deleting
+      responses:
+        200:
+          description: delete a user from list
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+  /api-data:
+    get:
+      summary:  returns lists based on parameters
+      responses:
+        200:
+          description: lists based on parameters
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/api-data'
+  /auth:
+    post:
+      summary:  returns list based on authentication factor
+      responses:
+        200:
+          description: lists of authenticated users
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/api-data'
+definitions:
+  User:
+    type: object
+    properties:
+      username:
+        type: varchar
+      email:
+        type: text
+      password:
+        type:text
+  User:
+    type: object
+    properties:
+      API: varchar
+      Description: text
+      Auth: text
+      HTTPS: boolean
+      Cors: text
+      Link: "https://www.adoptapet.com/public/apis/pet_list.html"
+      Category: varchar
